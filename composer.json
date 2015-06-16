@@ -1,13 +1,7 @@
 {
-    "name": "laracasts/flash",
-    "description": "Easy flash notifications",
+    "name": "ArthurGuy/Notifications",
+    "description": "Notifications",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Jeffrey Way",
-            "email": "jeffrey@laracasts.com"
-        }
-    ],
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "~5.0"
@@ -17,10 +11,10 @@
     },
     "autoload": {
         "psr-0": {
-            "Laracasts\\Flash": "src/"
+            "ArthurGuy\\Notifications": "src/"
         },
         "files": [
-            "src/Laracasts/Flash/functions.php"
+            "src/ArthurGuy/Notifications/functions.php"
         ]
     },
     "minimum-stability": "stable"
