@@ -1,16 +1,17 @@
 <?php
 
-if ( ! function_exists('flash')) {
+if ( ! function_exists('notification')) {
 
     /**
      * Arrange for a flash message.
      *
      * @param  string|null $message
-     * @return \Laracasts\Flash\FlashNotifier
+     * @return ArthurGuy\Notifications\Notifier
      */
-    function flash($message = null)
+    function notification($message = null)
     {
-        $notifier = app('flash');
+        /** @var ArthurGuy\Notifications\Notifier $notifier */
+        $notifier = app('notification');
 
         if ( ! is_null($message)) {
             return $notifier->info($message);

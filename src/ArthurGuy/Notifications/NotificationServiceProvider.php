@@ -1,4 +1,6 @@
-<?php namespace Laracasts\Flash;
+<?php
+
+namespace ArthurGuy\Notifications;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,12 +22,12 @@ class FlashServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'Laracasts\Flash\SessionStore',
-            'Laracasts\Flash\LaravelSessionStore'
+            'ArthurGuy\Notifications\SessionStore',
+            'ArthurGuy\Notifications\LaravelSessionStore'
         );
 
-        $this->app->bindShared('flash', function () {
-            return $this->app->make('Laracasts\Flash\FlashNotifier');
+        $this->app->bindShared('notification', function () {
+            return $this->app->make('ArthurGuy\Notifications\Notifier');
         });
     }
 
@@ -36,11 +38,7 @@ class FlashServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../views', 'flash');
 
-        $this->publishes([
-            __DIR__ . '/../../views' => base_path('resources/views/vendor/flash')
-        ]);
     }
 
 }

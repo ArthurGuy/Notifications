@@ -1,8 +1,11 @@
-<?php namespace Laracasts\Flash;
+<?php
+
+namespace ArthurGuy\Notifications;
 
 use Illuminate\Support\Facades\Facade;
 
-class Flash extends Facade {
+class NotificationFacade extends Facade
+{
 
     /**
      * Get the binding in the IoC container
@@ -11,7 +14,7 @@ class Flash extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'flash';
+        return 'notification';
     }
 
 } 
