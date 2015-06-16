@@ -38,7 +38,7 @@ class LaravelSessionStore implements SessionStore {
      */
     public function has($name)
     {
-        $this->session->has($name);
+        return $this->session->has($name);
     }
 
     /**
@@ -49,6 +49,6 @@ class LaravelSessionStore implements SessionStore {
      */
     public function get($name)
     {
-        $this->session->get($name);
+        return $this->session->get($name);
     }
 }
