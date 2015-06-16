@@ -4,7 +4,7 @@ namespace ArthurGuy\Notifications;
 
 use Illuminate\Support\ServiceProvider;
 
-class FlashServiceProvider extends ServiceProvider
+class NotificationServiceProvider extends ServiceProvider
 {
 
     /**
