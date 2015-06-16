@@ -1,4 +1,6 @@
-<?php namespace Laracasts\Flash;
+<?php
+
+namespace ArthurGuy\Notifications;
 
 use Illuminate\Session\Store;
 
